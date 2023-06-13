@@ -6,8 +6,8 @@ Eosinophilic Esophagitis (EoE) is a  chronic immune-mediated inflammatory diseas
 
 Contact: yilin.liu@vanderbilt.edu.
 
-## Data Preparation Pipeline
-1. Initial setup: _Clone the repository, create your own branch for development, and install dependencies_
+## Installation
+Initial setup: _Clone the repository, create your own branch for development, and install dependencies_
 
   ```sh
   git clone <EoE>
@@ -16,36 +16,32 @@ Contact: yilin.liu@vanderbilt.edu.
   
   ???INSTALL.md???
   ```
-2. Data Preparation Pipeline
 
-   2.1. Annotation
+## Data Preparation Pipeline
 
-   Annotations are done using the **QuPath** Software.
+   1. Image Annotations
 
-   2.2. Segmentation
-    - **json_to_contour.py**
-      > this will converted the json file above to contour and cut contour into 512*512 patches
-    
-    
-    
-    - **class_to_coco.py**
-      > this will read in the contour patches we just create and convert it to a COCO file
-    
-    
-    
-    - **coco_to_circlenet.py**  
-      > this will convert a COCO file to the CircleSnake compatible version
+      Annotations are done using the **QuPath** Software.
 
-3. Dataset
+   2. Image Segmentation
+      - **json_to_contour.py**
+        > this will converted the json file above to contour and cut contour into 512*512 patches
+      
+      
+      
+      - **class_to_coco.py**
+        > this will read in the contour patches we just create and convert it to a COCO file
+      
+      
+      
+      - **coco_to_circlenet.py**  
+        > this will convert a COCO file to the CircleSnake compatible version
 
-   3.1. Dataset Splitting
-   
-4. Models
+  3. Dataset Splitting
+  
+  4. Model Training and Testing
 
-   4.1. Models Introduction
+     - [CircleSnake](https://github.com/hrlblab/CircleSnake)
+     
+     - [Mask R-CNN](https://github.com/facebookresearch/detectron2)
 
-   - [CircleSnake](https://github.com/hrlblab/CircleSnake)
-   
-   - [Mask R-CNN](https://github.com/facebookresearch/detectron2)
-
-   4.2. Model Training and Testing
