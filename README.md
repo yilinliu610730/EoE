@@ -17,9 +17,11 @@ Contact: yilin.liu@vanderbilt.edu.
   ???INSTALL.md???
   ```
 2. Data Preparation Pipeline
-  2.1. Annotation
+
+   2.1. Annotation
     Annotations are done using the **QuPath** Software.
-  2.2. Segmentation
+
+   2.2. Segmentation
     - **json_to_contour.py**
       > this will converted the json file above to contour and cut contour into 512*512 patches
     
@@ -34,7 +36,11 @@ Contact: yilin.liu@vanderbilt.edu.
       > this will convert a COCO file to the CircleSnake compatible version
 
 3. Dataset
-  3.1. Dataset Splitting
+
+   3.1. Dataset Splitting
+   
 4. Models
-  4.1. Models Introduction
-  4.2. Model Training and Testing
+
+   4.1. Models Introduction
+
+   4.2. Model Training and Testing
