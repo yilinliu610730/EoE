@@ -7,7 +7,7 @@ Eosinophilic Esophagitis (EoE) is a  chronic immune-mediated inflammatory diseas
 Contact: yilin.liu@vanderbilt.edu.
 
 ## Data Preparation Pipeline
-* Initial setup: _Clone the repository, create your own branch for development, and install dependencies_
+1. Initial setup: _Clone the repository, create your own branch for development, and install dependencies_
 
   ```sh
   git clone <EoE>
@@ -16,10 +16,10 @@ Contact: yilin.liu@vanderbilt.edu.
   
   ???INSTALL.md???
   ```
-* Data Preparation Pipeline
-  * Annotation
+2. Data Preparation Pipeline
+  2.1 Annotation
     Annotations are done using the **QuPath** Software.
-  * Segmentation
+  2.2 Segmentation
     - **json_to_contour.py**
       > this will converted the json file above to contour and cut contour into 512*512 patches
     
@@ -33,8 +33,8 @@ Contact: yilin.liu@vanderbilt.edu.
     - **coco_to_circlenet.py**  
       > this will convert a COCO file to the CircleSnake compatible version
 
-* Dataset
-  * Dataset Splitting
-* Models
-  * Models Introduction
-  * Model Training and Testing
+3. Dataset
+  3.1 Dataset Splitting
+4. Models
+  4.1 Models Introduction
+  4.2 Model Training and Testing
