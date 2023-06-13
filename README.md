@@ -36,11 +36,11 @@ Contact: yilin.liu@vanderbilt.edu.
     - **coco_to_circlenet.py**  
       > this will convert a COCO file to the CircleSnake compatible version
 
-4. Dataset
+3. Dataset
 
    3.1. Dataset Splitting
    
-5. Models
+4. Models
 
    4.1. Models Introduction
 
