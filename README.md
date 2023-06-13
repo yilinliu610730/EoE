@@ -21,20 +21,20 @@ Initial setup: _Clone the repository, create your own branch for development, an
 
    1. Image Annotations
 
-      Annotations are done using the **QuPath** Software.
+      Annotations are done using the **QuPath** Software. JSON file containing individual annotation is then outputed using the **QuPath** build-in script.
 
    2. Image Segmentation
-      - **json_to_contour.py**
+      - [json_to_contour.py](json_to_contour.py)
         > this will converted the json file above to contour and cut contour into 512*512 patches
       
       
       
-      - **class_to_coco.py**
+      - [class_to_coco.py](class_to_coco.py)
         > this will read in the contour patches we just create and convert it to a COCO file
       
       
       
-      - **coco_to_circlenet.py**  
+      - [coco_to_circlenet.py](coco_to_circlenet.py)
         > this will convert a COCO file to the CircleSnake compatible version
 
   3. Dataset Splitting
