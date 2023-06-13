@@ -44,4 +44,8 @@ Contact: yilin.liu@vanderbilt.edu.
 
    4.1. Models Introduction
 
+   - [CircleSnake](https://github.com/hrlblab/CircleSnake)
+   
+   - [Mask R-CNN](https://github.com/facebookresearch/detectron2)
+
    4.2. Model Training and Testing
