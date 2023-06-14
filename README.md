@@ -24,7 +24,7 @@ Initial setup: _Clone the repository, create your own branch for development, an
       Annotations are done using the **QuPath** Software. JSON file containing individual annotation is then outputed using the **QuPath** build-in script.
 
    2. Image Segmentation
-      - [json_to_contour.py](json_to_contour.py)
+      - [json_to_contour.py](src/json_to_contour.py)
         > this will converted the json file above to contour and cut contour into 512*512 patches
       
       
