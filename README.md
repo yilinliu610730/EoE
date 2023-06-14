@@ -29,12 +29,12 @@ Initial setup: _Clone the repository, create your own branch for development, an
       
       
       
-      - [class_to_coco.py](class_to_coco.py)
+      - [class_to_coco.py](src/class_to_coco.py)
         > this will read in the contour patches we just create and convert it to a COCO file
       
       
       
-      - [coco_to_circlenet.py](coco_to_circlenet.py)
+      - [coco_to_circlenet.py](src/coco_to_circlenet.py)
         > this will convert a COCO file to the CircleSnake compatible version
 
   3. Dataset Splitting
