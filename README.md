@@ -19,6 +19,8 @@ Initial setup: _Clone the repository, create your own branch for development, an
 
 ## Data Preparation Pipeline
 
+  Please refer to [GETTING_STARTED](docs/GETTING_STARTED.md) for guidance to train, inferences, and develop our work.
+
    1. Image Annotations
 
       Annotations are done using the **QuPath** Software. JSON file containing individual annotation is then outputed using the **QuPath** build-in script.
