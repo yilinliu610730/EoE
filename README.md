@@ -7,15 +7,8 @@ Eosinophilic Esophagitis (EoE) is a  chronic immune-mediated inflammatory diseas
 Contact: yilin.liu@vanderbilt.edu.
 
 ## Installation
-Initial setup: _Clone the repository, create your own branch for development, and install dependencies_
 
-  ```sh
-  git clone <EoE>
-  
-  git checkout -b <branch_name>
-  
-  ???INSTALL.md???
-  ```
+  Please refer to [INSTALL](docs/INSTALL.md)  for installation instruction.
 
 ## Data Preparation Pipeline
 
