@@ -5,27 +5,28 @@
 
      To begin annotating the Whole Slide Image, you will need to download the **QuPath** software. You can download it by following the provided [link](https://qupath.readthedocs.io/en/0.4/docs/intro/installation.html). Once the software is installed, you can start the annotation process by clicking on the "Create Project" button. From there, you can open the desired Whole Slide Image that you want to annotate.
 
-     ![](../images/QuPath_Create.png)
+     <img src="../images/QuPath_Create.png" alt= “” width="80%" height="80%">
 
+     
   2. #### How to Open Pre-existing Annotations?
 
      If we have pre-existing annotation file (in .qpdata format) and we want to import the annotation file to our whole slide image, we can first click **File/save** button and then go to the project directory. In the project directory where your QuPath project is located, you can see an empty annotation file (in .qpdata format). We can replace the empty annotation file by the pre-existing file and reopen the Whole Slide Image. Then the annotations will be correctly imported into our project.
 
-     ![](../images/QuPath_Annotation.png)
+     <img src="../images/QuPath_Annotation.png" alt= “” width="60%" height="60%">
 
-  3. #### How to Annotate?
+  2. #### How to Annotate?
 
      To annotate, we can use the toolbar on the top bar. There are eight different shape of brush stroke we can use depending on the shape of the objects we want to annotate. Then we can click the shape we want and draw the annotated objects in the Whole Slide Image.
 
-     ![](../images/QuPath_Draw.png)
+     <img src="../images/QuPath_Draw.png" alt= “” width="80%" height="80%">
 
-  4. #### How to View Your Annotations and How to Classify Them?
+  5. #### How to View Your Annotations and How to Classify Them?
 
      To access your annotations, navigate to the Annotations button located on the top bar. By clicking on an annotation, you can view the corresponding region and make edits if necessary. To assign a classification to your annotation, select the desired annotations and choose the desired class. Finally, click the **Set class** button to apply the assigned class.
 
-     <img src="../images/QuPath_Class.png" alt= “” width="80%" height="80%">
+     <img src="../images/QuPath_Class.png" alt= “” width="40%" height="40%">
      
-  5. #### Convert Annotations into JSON File
+  6. #### Convert Annotations into JSON File
 
      Run the [link](https://github.com/yilinliu610730/EoE/blob/main/src/export_json.groovy) inside QuPath (Automate bar → Show script editor → paste script → run). Make sure to change the **path** to your directory.
 
@@ -45,7 +46,7 @@
 
      If there are multiple annotations within a patch, all of the contours will be generated and placed after the original patch.
 
-     ![](../images/contour.png)
+     <img src="../images/contour.png" alt= “” width="60%" height="60%">
 
 ### Step 3: Dataset
 
