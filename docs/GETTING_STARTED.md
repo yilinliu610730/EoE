@@ -28,7 +28,7 @@
      
   6. #### Convert Annotations into JSON File
 
-     Run the [link](https://github.com/yilinliu610730/EoE/blob/main/src/export_json.groovy) inside QuPath (Automate bar → Show script editor → paste script → run). Make sure to change the **path** to your directory.
+     Run the [link](../src/export_json.groovy) inside QuPath (Automate bar → Show script editor → paste script → run). Make sure to change the **path** to your directory.
 
      You can also refer to QuPath document for additional help using this [link](https://qupath.readthedocs.io/en/0.4/docs/advanced/exporting_annotations.html#shapes).
 
@@ -36,13 +36,13 @@
 
   1. #### Generate Segmentation
 
-     Run the [export_patches script](src/export_patches.groovy) inside QuPath (Automate bar → Show script editor → paste script → run). Please ensure to modify the **path** in the code to match your directory. Additionally, you have the flexibility to adjust parameters like downsample, tileSize, and pixel overlap according to your specific design requirements. In our implementation, the patch size is set as 512x512 pixels, which means the original Whole Slide Imaging (WSI) will be segmented into patches of that size.
+     Run the [export_patches script](../src/export_patches.groovy) inside QuPath (Automate bar → Show script editor → paste script → run). Please ensure to modify the **path** in the code to match your directory. Additionally, you have the flexibility to adjust parameters like downsample, tileSize, and pixel overlap according to your specific design requirements. In our implementation, the patch size is set as 512x512 pixels, which means the original Whole Slide Imaging (WSI) will be segmented into patches of that size.
 
      You can also refer to QuPath document for additional help using this [link](https://qupath.readthedocs.io/en/0.4/docs/advanced/exporting_annotations.html#binary-labeled-images).
 
   2. #### Generate Contour
 
-     Run the python [json_to_contour script](src/json_to_contour.py) to generate contour corresponding to the 512x512 pixels patches (see following figure). As depicted in the figure, the generated contour will be segmented into patches of 512x512 pixels. Each individual annotation will be painted in its respective location within the patch.
+     Run the python [json_to_contour script](../src/json_to_contour.py) to generate contour corresponding to the 512x512 pixels patches (see following figure). As depicted in the figure, the generated contour will be segmented into patches of 512x512 pixels. Each individual annotation will be painted in its respective location within the patch.
 
      If there are multiple annotations within a patch, all of the contours will be generated and placed after the original patch.
 
@@ -56,7 +56,7 @@
 
   2. #### Generate COCO File
 
-     To convert the contour patches we have created into a COCO file, you can run the provided Python script. Please use the following link to access the [class_to_coco script](src/class_to_coco.py). To set the train, val, and test dataset ratios that you have specified, you can update the "sublist" array as shown below:
+     To convert the contour patches we have created into a COCO file, you can run the provided Python script. Please use the following link to access the [class_to_coco script](../src/class_to_coco.py). To set the train, val, and test dataset ratios that you have specified, you can update the "sublist" array as shown below:
 
      ```python
      sublist["train"] = ["WSI_1", "WSI_2", ...]
