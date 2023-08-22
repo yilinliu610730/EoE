@@ -1,0 +1,17 @@
+__pycache__/
+.idea/
+.ipynb_checkpoints/
+*.py[cod]
+*.so
+*.orig
+*.o
+*.json
+*.pth
+*.npy
+*.DS_Store
+lib/csrc/extreme_utils/build/
+lib/csrc/roi_align_layer/build/
+debug_metrics/
+data/
+circlesnake-apex/
+lib/csrc/dcn_v2/build/
