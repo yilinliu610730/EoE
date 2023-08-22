@@ -8,9 +8,9 @@ from PIL import Image
 Image.MAX_IMAGE_PIXELS = None
 
 def json_to_contour():
-    image_dir = '/home/VANDERBILT/liuy99/Documents/EOS/train/images'
-    json_dir = '/home/VANDERBILT/liuy99/Documents/EOS/train/converted_json'
-    output_dir = '/home/VANDERBILT/liuy99/Documents/EOS/train/annotation_patches'
+    image_dir = 'YOUR_IMAGE_DIRECTORY'
+    json_dir = 'YOUR_JSON_DIRECTORY'
+    # output_dir = 'YOUR_OUTPUT'
     cnt = 1
 
     for filename in os.listdir(image_dir):
@@ -78,8 +78,8 @@ def json_to_contour():
 def cut_image(contour, xmin, ymin, cnt, classification, width=512, height=512):
     # Load image
 
-    directory = '/home/VANDERBILT/liuy99/Documents/EOS/train/EoE_train'
-    output_dir = '/home/VANDERBILT/liuy99/Documents/EOS/train/EoE_train'
+    directory = 'YOUR_DIRECTORY'
+    output_dir = 'YOUR_OUTPUT_DIRECTORY'
     categories = ['']
 
     for (root, dirs, _) in os.walk(directory, topdown=True):
@@ -87,6 +87,7 @@ def cut_image(contour, xmin, ymin, cnt, classification, width=512, height=512):
             dir = os.path.join(root, scn)
             for filename in os.listdir(dir):
                 # if filename.endswith(".jpg"):
+                # modify based on your need
                 patch_x = int(filename.split(',')[0].split('=')[1])
                 patch_y = int(filename.split(',')[1].split('=')[1])
 
@@ -112,8 +113,8 @@ def cut_image(contour, xmin, ymin, cnt, classification, width=512, height=512):
 def cut_mask(file, contour, xmin, ymin, cnt, classification, width=512, height=512):
     # Load image
 
-    directory = '/home/VANDERBILT/liuy99/Documents/EOS/train/EoE_train'
-    output_dir = '/home/VANDERBILT/liuy99/Documents/EOS/train/EoE_train'
+    directory = 'YOUR_DIRECTORY'
+    output_dir = 'YOUR_OUTPUT_DIRECTORY'
     categories = ['']
 
     for (root, dirs, _) in os.walk(directory, topdown=True):

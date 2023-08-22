@@ -8,14 +8,14 @@ import numpy as np
 from pycococreatortools import pycococreatortools
 from utils import filter_for_annotations, filter_for_jpeg, walklevel
 
-ROOT_DIR = "/home/VANDERBILT/liuy99/Documents/EOS/train/EoE_train"
+ROOT_DIR = "YOUR_ROOT_DIRECTORY"
 IMAGE_DIR = ROOT_DIR
 ANNOTATION_DIR = ROOT_DIR
-JSON_DIR = "/home/VANDERBILT/liuy99/Documents/EOS/CircleSnake3/data/EoE"
+JSON_DIR = "YOUR_JSON_DIRECTROY"
 
 INFO = {
     "description": "EoE Dataset",
-    "url": "https://github.com/yilinliu610730/EOS",
+    "url": "YOUR_URL",
     "version": "0.1.0",
     "year": 2022,
     "contributor": "Yilin Liu",
@@ -23,7 +23,7 @@ INFO = {
 }
 
 LICENSES = [
-    {"id": 1, "name": "Vanderbilt University - HRLB Lab - Dr. Yuankai Huo"}
+    {"id": 1, "name": "YOUR_LICENSE"}
 ]
 
 CATEGORIES = [
@@ -36,16 +36,9 @@ CATEGORIES = [
 
 def main():
     sublist = {}
-    sublist["train"] = ["P18_1340_S2", "P18_4227_S6", "P18_5994_S4", "P18_3151_S6", "P18_6324_S2", "P18_7223_S2",
-                        "P18_7425_S2", "P18_4729_S6", "P18_4039_S6", "P18_5955_S2", "P18_4927_S2", "P17_8354_S2",
-                        "P18_4224_S2", "P17_7861_S4", "P19_1500_S6", "P18_1347_S2", "P18_2826_S6", "P17_9212_S8",
-                        "P18_4925_S2", "P18_7019_S6", "P18_1560_S4", "P17_8185_S2", "P18_9023_S2", "P17_8653_S6",
-                        "P17_9025_S2", "P18_1426_S2", "P18_3319_S6", "P18_7901_S4", "P18_4274_S2", "P18_4175_S6",
-                        "P17_8188_S2", "P18_3322_S6", "P17_3412_S6", "P18_4124_S6", "P18_4157_S6", "P18_4471_S8",
-                        "P18_5733_S2"]
-    sublist["val"] = ["P17_5219_S6", "P18_4217_S2"]
-    sublist["test"] = ["P17_8000_S2", "P17_9319_S6", "P18_1151_S5", "P18_1519_S2", "P18_1693_S2", "P18_1908_S2",
-                       "P18_2818_S6", "P18_3141_S6", "P18_4140_S5", "P18_4154_S8", "P18_4922_S6"]
+    sublist["train"] = ["P18_1340_S2", "..."]
+    sublist["val"] = ["P17_5219_S6", "..."]
+    sublist["test"] = ["P17_8000_S2", "..."]
 
     types = ["train", "val", "test"]
 
