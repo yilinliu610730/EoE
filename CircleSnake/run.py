@@ -58,53 +58,51 @@ def run_evaluate():
     network = make_network(cfg).cuda()
 
     # get ap for each model
-    epoch = 29
-    while epoch < 30:
-        print('--------------------------testing epoch = {}----------------------------------'.format(epoch))
-        load_network(network, cfg.model_dir, epoch=epoch)
-        network.eval()
 
-        if cfg.rotate_reproduce:
-            cfg.segm_or_bbox = "segm"
-            data_loader = make_data_loader(cfg, is_train=False)
-            # rot_data_loader = make_data_loader(cfg, is_train=False)
-            evaluator = make_evaluator(cfg)
+    print('--------------------------testing epoch = {}----------------------------------'.format(cfg.test.epoch))
+    load_network(network, cfg.model_dir, epoch=cfg.test.epoch)
+    network.eval()
 
-            for batch in tqdm.tqdm(data_loader):
-                inp = batch["inp"].cuda()
-                # inp_rotated = torch.from_numpy(cv2.rotate(batch['inp'].numpy().reshape(512, 512, 3), cv2.ROTATE_90_CLOCKWISE).reshape(1, 3, 512, 512)).cuda()
-                with torch.no_grad():
-                    output = network(inp, batch)
-                    # output_rot = network(inp_rotated, batch)
+    if cfg.rotate_reproduce:
+        cfg.segm_or_bbox = "segm"
+        data_loader = make_data_loader(cfg, is_train=False)
+        # rot_data_loader = make_data_loader(cfg, is_train=False)
+        evaluator = make_evaluator(cfg)
 
-                evaluator.evaluate_rotate(output, batch)
-                # evaluator.evaluate_rotate(output_rot, batch, True)
+        for batch in tqdm.tqdm(data_loader):
+            inp = batch["inp"].cuda()
+            # inp_rotated = torch.from_numpy(cv2.rotate(batch['inp'].numpy().reshape(512, 512, 3), cv2.ROTATE_90_CLOCKWISE).reshape(1, 3, 512, 512)).cuda()
+            with torch.no_grad():
+                output = network(inp, batch)
+                # output_rot = network(inp_rotated, batch)
 
-            cfg.rotate = 90
-            for batch in tqdm.tqdm(data_loader):
-                inp = batch["inp"].cuda()
-                with torch.no_grad():
-                    output = network(inp, batch)
-                evaluator.evaluate_rotate(output, batch, rotate=True)
+            evaluator.evaluate_rotate(output, batch)
+            # evaluator.evaluate_rotate(output_rot, batch, True)
 
-            evaluator.summarize_rotate()
+        cfg.rotate = 90
+        for batch in tqdm.tqdm(data_loader):
+            inp = batch["inp"].cuda()
+            with torch.no_grad():
+                output = network(inp, batch)
+            evaluator.evaluate_rotate(output, batch, rotate=True)
 
-        else:
-            data_loader = make_data_loader(cfg, is_train=False)
-            evaluator = make_evaluator(cfg)
-            for batch in tqdm.tqdm(data_loader):
-                # inp = batch["inp"].cuda()
-                # batch = batch.cuda()
-                for key, value in batch.items():
-                    if key == 'meta':
-                        continue
-                    batch[key] = batch[key].cuda()
-                inp = batch["inp"]
-                with torch.no_grad():
-                    output = network(inp, batch)
-                evaluator.evaluate(output, batch)
-            evaluator.summarize()
-        epoch += 5
+        evaluator.summarize_rotate()
+
+    else:
+        data_loader = make_data_loader(cfg, is_train=False)
+        evaluator = make_evaluator(cfg)
+        for batch in tqdm.tqdm(data_loader):
+            # inp = batch["inp"].cuda()
+            # batch = batch.cuda()
+            for key, value in batch.items():
+                if key == 'meta':
+                    continue
+                batch[key] = batch[key].cuda()
+            inp = batch["inp"]
+            with torch.no_grad():
+                output = network(inp, batch)
+            evaluator.evaluate(output, batch)
+        evaluator.summarize()
 
 def run_visualize():
     import torch

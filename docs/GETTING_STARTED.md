@@ -216,7 +216,7 @@ Once you have completed the installation, you can proceed with the training and 
     
     Parameters:
     --cfg_file configs/coco_circlesnake_eoe.yaml
-    model CircleNet_eoe
+    model "LOAD MODEL FROM /model DIR"
     train.dataset eosTrain
     test.dataset eosTest
     pretrain ctdet_coco_dla_2x_converted
@@ -233,9 +233,9 @@ Once you have completed the installation, you can proceed with the training and 
     Parameters:
     --type evaluate
     --cfg_file configs/coco_circlesnake_eoe.yaml
-    model CircleNet_eoe
+    model "LOAD MODEL FROM /model DIR"
     test.dataset eosTest
-    test.epoch 49
+    test.epoch "THE EPOCH YOU WANT TO TEST"
     ct_score 0.2
     segm_or_bbox segm
     dice True
