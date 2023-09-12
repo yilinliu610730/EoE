@@ -209,6 +209,7 @@ Once you have completed the installation, you can proceed with the training and 
 3. #### Configure Training and Testing Settings
 
    To train the CircleSnake model, you can create a Run/Debug configuration with the following settings:
+   The pretrained model has been made available at this [link]([https://qupath.readthedocs.io/en/0.4/docs/intro/installation.html](https://drive.google.com/drive/folders/1qtfwamJZwrBaf6xA41oV7ouBulmfgVwa?usp=sharing)).
 
    ```python
     Script path: 
